@@ -1,0 +1,16 @@
+^{:mode :serve}
+{
+ :main                 cljs-reframe-template.core
+ :source-paths ["src/cljs" "env/dev"]
+  ;:output-to            "resources/public/js/compiled/app.js"
+  ;:output-dir           "resources/public/js/compiled/out"
+  ;:asset-path           "js/compiled/out"
+  ;:source-map-timestamp true
+ :infer-externs true
+
+  :preloads             [;devtools.preload
+                         day8.re-frame-10x.preload]
+  :closure-defines      {"re_frame.trace.trace_enabled_QMARK_" true}}
+                         ;"day8.re_frame.tracing.trace_enabled_QMARK_" true}
+  ;:external-config      {:devtools/config {:features-to-install :all}}}
+
