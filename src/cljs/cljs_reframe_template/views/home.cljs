@@ -16,18 +16,11 @@
    ["#" :routes/frontpage]
    ["component" :routes/component]])
 
-
-(def components
-  {:routes/frontpage main
-   :routes/component compo/main})
-
 ;; main
 
 (defn show-panel [route]
   (when-let [route-data (:data route)]
-    (let [view (->> route-data
-                    :name
-                    (get components))]
+    (let [view (:view route-data)]
       [:<>
        [view]
        [:pre (with-out-str (cljs.pprint/pprint route))]])))
