@@ -2,29 +2,28 @@
   (:require
     [re-frame.core :as rf]
     [reitit.frontend :as rtf]
+    [reitit.frontend.history :as rtfh]
     [reitit.frontend.easy :as rtfe]
     [reitit.coercion.schema :as rsc]
-    [cljs-reframe-template.events :as events]
-    [cljs-reframe-template.home :as home]
-    [cljs-reframe-template.views.comp1 :as comp1]))
+    [cljs-reframe-template.use-cases.core-cases :as ccases]))
 
 
 (def routes
     (rtf/router
       ["/"
        [""
-        {:name :routes/frontpage
-         :view home/main}]
+        {:name :routes/frontpage}]
        ["component"
-        {:name :routes/component
-         :view comp1/main}]]
-
+        {:name :routes/component}]]
 
       {:data {:coercion rsc/coercion}}))
 
+
+
 (defn app-routes []
+
   (rtfe/start! routes
-               (fn [m] (rf/dispatch [::events/set-active-panel m]))
+               (fn [m] (rf/dispatch [::ccases/set-active-panel m]))
                {:use-fragment true}))
 
 

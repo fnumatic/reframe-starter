@@ -2,10 +2,9 @@
   (:require
    [reagent.core :as reagent]
    [re-frame.core :as re-frame]
-   [re-pressed.core :as rp]
-   [cljs-reframe-template.events :as events]
+   [cljs-reframe-template.use-cases.core-cases :as ccases]
    [cljs-reframe-template.routes :as routes]
-   [cljs-reframe-template.home :as views]
+   [cljs-reframe-template.views.home :as views]
    [cljs-reframe-template.config :as config]
    [cljs-reframe-template.styles :as styl]))
 
@@ -28,10 +27,9 @@
 
 (defn ^:export init []
   (println "init again..")
-  (routes/app-routes)
-  (re-frame/dispatch-sync [::events/initialize-db])
-  (re-frame/dispatch-sync [::rp/add-keyboard-event-listener "keydown"])
+  (re-frame/dispatch-sync [::ccases/initialize-db])
   (dev-setup)
+  (routes/app-routes)
 
   (mount-root))
 

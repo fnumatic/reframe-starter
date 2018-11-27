@@ -1,4 +1,4 @@
-(ns cljs-reframe-template.viewtools
+(ns tools.viewtools
   (:require [reitit.frontend.easy :as rtfe]))
 
 
