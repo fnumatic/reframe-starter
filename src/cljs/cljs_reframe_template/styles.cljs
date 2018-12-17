@@ -1,6 +1,6 @@
 (ns cljs-reframe-template.styles
   (:require
-
+      [goog.dom :as gdom]
       [garden.core :as g]))
 
 
@@ -15,31 +15,24 @@
 
 (defn inject-node! [old-node new-node document]
   (if old-node
-    (-> old-node
-        (.-parentNode)
-        (.replaceChild new-node old-node))
-    (let []
-      (.appendChild (.-head document) new-node)
-      new-node)))
+    (gdom/replaceNode new-node old-node)
+    (gdom/appendChild (.-head document) new-node)))
 
 (defn inject-inline-style [document id style]
-  (let [old-style (.getElementById document id)
-        new-style (.createElement document "style")
-        attr      #(.setAttribute new-style %1 %2)]
-    (attr "id" id)
-    (attr "type" "text/css")
-    (-> new-style
-        (.-innerHTML)
-        (set! style))
+  (let [old-style (gdom/getElement  id)
+        new-style (gdom/createDom "style"
+                                  (clj->js {:type "text/css"
+                                            :id id})
+                                  style)]
+
     (inject-node! old-style new-style document)))
 
 (defn inject-inline-link [document id link]
-  (let [old-link (.getElementById document id)
-        new-link (.createElement document "link")
-        attr     #(.setAttribute new-link %1 %2)]
-    (attr  "id" id)
-    (attr  "rel" "stylesheet")
-    (attr  "href" link)
+  (let [old-link (gdom/getElement id)
+        new-link (gdom/createDom "link"
+                                 (clj->js {:id id
+                                           :rel :stylesheet
+                                           :href link}))]
 
     (inject-node! old-link new-link document)))
 
