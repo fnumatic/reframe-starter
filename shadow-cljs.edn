@@ -1,0 +1,18 @@
+{:deps   {:aliases [:dev :test  ]}
+
+ :nrepl  {:port 7002}
+ :builds {:app {:target           :browser
+                :asset-path       "js"
+                :output-dir       "resources/public/js"
+              
+                :modules          {
+                                   :main {:entries [cljs-reframe-template.core]
+                                          :init-fn cljs-reframe-template.core/init
+                                          
+                                          }}
+                :devtools         {
+                                   :http-port 8021
+                                   :http-root "resources/public/"
+                                   :after-load cljs-reframe-template.core/re-render
+                                   :preloads  [devtools.preload shadow.remote.runtime.cljs.browser]}}}
+ }
