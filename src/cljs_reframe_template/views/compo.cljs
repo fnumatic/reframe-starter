@@ -2,7 +2,7 @@
 
 (defn main []
     [:div
-     [:h2 "simple Component jksd"]
+     [:h2.text-4xl "simple Component jksd"]
      [:div "Component"]])
 
 

@@ -21,7 +21,8 @@
 (defn nav-item [i]
   (if (= :sep i)
     [sep]
-    [:a {:href (rtfe/href (second i))} (first i)]))
+    [:a.text-blue-700
+     {:href (rtfe/href (second i))} (first i)]))
 
 (defn navigation [routes]
   (let [coll (->> routes (interpose :sep) (map-indexed vector))]

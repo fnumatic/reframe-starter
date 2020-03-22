@@ -1,9 +1,13 @@
-{
+{ "scripts": {
+  "tw": "npx tailwind build resources/tw/style.css -o resources/public/app.css --no-autoprefixer",
+  "watch:css": "onchange 'resources/tw/*css' -- npm run tw"
+  },
   "dependencies": {
     "highlight.js": "9.15.10",
     "react": "16.13.0",
     "react-dom": "16.13.0",
-    "react-highlight.js": "1.0.7"
+    "react-highlight.js": "1.0.7",
+    "tailwindcss": "^1.2.0"
   },
   "devDependencies": {
     "shadow-cljs": "^2.8.92"

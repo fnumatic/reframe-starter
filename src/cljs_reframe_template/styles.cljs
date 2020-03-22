@@ -39,5 +39,5 @@
 
 (defn inject-trace-styles [document]
   (inject-inline-style document "--reframe-template--" (apply g/css styles))
-  (inject-inline-link document "--bootstrap--"  "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"))
+  (inject-inline-link document "--app.css--"  "/app.css"))
 
