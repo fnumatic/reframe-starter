@@ -8,6 +8,8 @@ dev tooling with shadow-cljs
 
 styles per inline injection with https://github.com/noprompt/garden[CSS Garden]
 
+styles via TailwindCSS https://tailwindcss.com/ 
+
 == Development Mode
 
 
@@ -24,6 +26,14 @@ npx shadow-cljs compile app
 
 ----
 npx shadow-cljs release app
+----
+
+=== CSS via Tailwind
+
+* purge CSS
+
+----
+npm run-script tw
 ----
 
 === Run application:
