@@ -15,10 +15,10 @@
            org.clojure/clojurescript {:mvn/version "RELEASE"},
            re-pressed                {:mvn/version "0.3.1"
                                       :exclusions  [re-frame reagent]},
-           garden                    {:mvn/version "1.3.9"},
-           metosin/reitit-schema     {:mvn/version "0.4.2"},
-           metosin/reitit-frontend   {:mvn/version "0.4.2"},
-           metosin/reitit            {:mvn/version "0.4.2"},
+           garden                    {:mvn/version "1.3.10"},
+           metosin/reitit-schema     {:mvn/version "0.5.2"},
+           metosin/reitit-frontend   {:mvn/version "0.5.2"},
+           metosin/reitit            {:mvn/version "0.5.2"},
            re-frame                  {:mvn/version "0.12.0"},
-           thheller/shadow-cljs      {:mvn/version "2.8.90"}},
+           thheller/shadow-cljs      {:mvn/version "2.10.13"}},
  :paths   ["src" "resources"  "test/cljs"]}
