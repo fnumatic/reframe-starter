@@ -4,7 +4,7 @@
  :builds {:app {:target           :browser
                 :asset-path       "js"
                 :output-dir       "resources/public/js"
-              
+                :compiler-options {:infer-externs :auto}
                 :modules          {
                                    :main {:entries [cljs-reframe-template.core]
                                           :init-fn cljs-reframe-template.core/init

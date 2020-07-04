@@ -3,6 +3,7 @@
     [re-frame.core :as re-frame]
     [cljs-reframe-template.use-cases.core-cases :as ccases]
     [tools.viewtools :as vt]
+    [cljs.pprint :as pp]
     [cljs-reframe-template.views.compo :as compo]))
 
 
@@ -20,7 +21,7 @@
   [:div.m-4
    [:p "Routeinfo"]
    [:pre.border-solid.border-2.rounded
-    (with-out-str (cljs.pprint/pprint route))]])
+    (with-out-str (pp/pprint route))]])
 ;; main
 
 (defn show-panel [route]
