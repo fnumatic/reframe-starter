@@ -11,4 +11,7 @@ out
 package-lock.json
 /.shadow-cljs
 /.cpcache
+/.clj-kondo
+/.lsp
+/.calva
 /.vscode
