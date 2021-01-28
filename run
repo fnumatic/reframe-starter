@@ -16,7 +16,7 @@
 
 (defn buildreport []
   (let [file (str "buildreport_" (.format date formatter) ".html")]
-   ($  npx shadow-cljs run shadow.cljs.build-report renderer ~file)))
+   ($  npx shadow-cljs run shadow.cljs.build-report app ~file)))
 
 
 (def tree
