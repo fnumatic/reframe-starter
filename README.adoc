@@ -44,7 +44,7 @@ Wait a bit, then browse to http://localhost:8021.
 
 == Using babashka
 
-https://github.com/babashka/babashka [babashka]
+https://github.com/babashka/babashka[babashka]
 
 ----
 ./run watch
