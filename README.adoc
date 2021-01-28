@@ -41,3 +41,16 @@ npm run-script tw
 
 
 Wait a bit, then browse to http://localhost:8021.
+
+== Using babashka
+
+https://github.com/babashka/babashka [babashka]
+
+----
+./run watch
+./run compile
+./run release
+./run purgecss
+./run buildreport
+----
+
