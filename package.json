@@ -4,15 +4,15 @@
     "watch:css": "onchange 'resources/tw/*css' -- npm run tw"
   },
   "dependencies": {
-    "highlight.js": "^10.5.0",
+    "highlight.js": "^10.6.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-highlight.js": "^1.0.7"
   },
   "devDependencies": {
-    "shadow-cljs": "^2.11.14",
-    "tailwindcss": "^2.0.2",
-    "autoprefixer": "^10.2.4",
-    "postcss": "^8.2.4"
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.8",
+    "shadow-cljs": "^2.11.23",
+    "tailwindcss": "^2.0.3"
   }
 }
