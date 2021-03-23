@@ -32,5 +32,3 @@
   (routes/app-routes)
 
   (mount-root))
-
-(defonce init-block (init))
