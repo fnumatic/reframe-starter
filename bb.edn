@@ -1,0 +1,16 @@
+;;bb > v0.35
+{:tasks
+ {
+  watch {:task (shell "npx shadow-cljs watch app")}
+  compile {:task (shell "npx shadow-cljs compile app")}
+  release {:task (shell "npx shadow-cljs release app")}
+ ;;tailwind 
+  purgecss {:task (shell "npm run-script tw")}
+ ;;shadow report
+  buildreport {:task (let [date (java.time.LocalDateTime/now)
+                           formatter (java.time.format.DateTimeFormatter/ofPattern "yyyy-MM-dd")
+                           file (str "buildreport_" (.format date formatter) ".html")]
+                       (shell (str "npx shadow-cljs run shadow.cljs.build-report app " file)))}
+
+  ,}}
+ 

@@ -46,11 +46,19 @@ Wait a bit, then browse to http://localhost:8021.
 
 https://github.com/babashka/babashka[babashka]
 
+- use of the new babashka tasks feature
+- config via bb.edn
+
+
 ----
-./run watch
-./run compile
-./run release
-./run purgecss
-./run buildreport
+bb tasks
+----
+
+----
+bb watch
+bb compile
+bb release
+bb purgecss
+bb buildreport
 ----
 
