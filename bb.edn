@@ -1,9 +1,12 @@
-;;bb > v0.35
+;;bb >= v1.35
 {:tasks
  {
   watch {:task (shell "npx shadow-cljs watch app")}
   compile {:task (shell "npx shadow-cljs compile app")}
   release {:task (shell "npx shadow-cljs release app")}
+  ;;updates
+  update-npm {:task (shell "npx npm-check-updates -u")}
+  update-deps {:task (shell "clojure -Aoutdated -a outdated --write")}
  ;;tailwind 
   purgecss {:task (shell "npm run-script tw")}
  ;;shadow report
