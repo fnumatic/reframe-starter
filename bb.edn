@@ -1,5 +1,6 @@
-;;bb >= v1.35
-{:tasks
+{
+ :min-bb-version "0.3.6"
+ :tasks
  {
   watch {:task (shell "npx shadow-cljs watch app")}
   compile {:task (shell "npx shadow-cljs compile app")}
