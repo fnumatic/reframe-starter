@@ -30,7 +30,15 @@ npx shadow-cljs release app
 
 === CSS via Tailwind
 
-* purge CSS
+* CSS artifacts are compiled 
+** via Tailwind's new JIT Engine
+* using
+* https://github.com/teknql/shadow-cljs-tailwind-jit 
+* so one can use 
+** build hooks
+** inside Shadow-Cljs projects
+
+==== manually purge CSS
 
 ----
 npm run-script tw
