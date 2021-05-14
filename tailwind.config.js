@@ -1,9 +1,9 @@
 module.exports = {
-  purge: {
-    enabled: true,
-    content: ['./resources/**/*.html',
-              './resources/**/*.js'],
-  },
+  mode: 'jit',
+  purge: [
+    './resources/**/*.html',
+    './resources/**/*.js'
+  ],
   theme: {
     extend: {},
   },
