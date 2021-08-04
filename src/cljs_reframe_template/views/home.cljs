@@ -9,6 +9,7 @@
 
 (defn main []
   [:div
+   {:class ["h-[220px]" "w-[300px]" :bg-blue-50 :m-4 :p-2 "rounded-[5px]"]}
    [:h2.text-4xl "home"]
    [:p "nothing to see here"]])
 
