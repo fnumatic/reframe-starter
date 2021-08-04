@@ -7,7 +7,7 @@
   release {:task (shell "npx shadow-cljs release app")}
   ;;updates
   update-npm {:task (shell "npx npm-check-updates -u")}
-  update-deps {:task (shell "clojure -Aoutdated -a outdated --write")}
+  update-deps {:task (shell "clojure -Moutdated -a outdated --write")}
  ;;tailwind 
   purgecss {:task (shell "npm run-script tw")}
  ;;shadow report
