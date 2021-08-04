@@ -7,7 +7,7 @@
                                     binaryage/devtools         {:mvn/version "1.0.3"},
                                     day8.re-frame/re-frame-10x {:mvn/version "1.1.10"}}
                       :extra-paths ["src" "env/dev" "target"]}
-           :outdated {:extra-deps {olical/depot {:mvn/version "2.3.0"}}
+           :outdated {:replace-deps {olical/depot {:mvn/version "2.3.0"}}
                       :main-opts  ["-m" "depot.outdated.main"]}},
  :deps    {org.clojure/clojure       {:mvn/version "RELEASE"},
            reagent/reagent           {:mvn/version "1.1.0"},
@@ -17,9 +17,9 @@
                                       :exclusions  [re-frame/re-frame 
                                                     reagent/reagent]},
            garden/garden             {:mvn/version "1.3.10"},
-           metosin/reitit-schema     {:mvn/version "0.5.13"},
-           metosin/reitit-frontend   {:mvn/version "0.5.13"},
-           metosin/reitit            {:mvn/version "0.5.13"},
+           metosin/reitit-schema     {:mvn/version "0.5.14"},
+           metosin/reitit-frontend   {:mvn/version "0.5.14"},
+           metosin/reitit            {:mvn/version "0.5.14"},
            re-frame/re-frame         {:mvn/version "1.2.0"},
-           thheller/shadow-cljs      {:mvn/version "2.14.6"}},
+           thheller/shadow-cljs      {:mvn/version "2.15.2"}},
  :paths   ["src" "resources"  "test/cljs"]}
