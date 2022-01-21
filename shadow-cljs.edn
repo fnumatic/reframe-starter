@@ -7,7 +7,7 @@
                 :dev              {:build-hooks [(teknql.tailwind/start-watch!)]}
                 :release          {:build-hooks [(teknql.tailwind/compile-release!)]}
                 :tailwind/output  "resources/public/app.css"
-                :tailwind/files   {:base-path "./."
+                :tailwind/files   {:base-path "."
                                    :tailwind.css "./resources/tw/style.css"}
                 :compiler-options {:infer-externs :auto}
                 :modules          {
