@@ -39,5 +39,5 @@
 
 (defn inject-trace-styles [document]
   (inject-inline-style document "--reframe-template--" (apply g/css styles))
-  (inject-inline-link document "--app.css--"  "/app.css"))
+  (inject-inline-link document "--app.css--"  "app.css"))
 
