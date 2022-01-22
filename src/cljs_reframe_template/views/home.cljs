@@ -1,10 +1,8 @@
 (ns cljs-reframe-template.views.home
   (:require
     [re-frame.core :as re-frame]
-    [cljs-reframe-template.use-cases.core-cases :as ccases]
     [tools.viewtools :as vt]
-    [cljs.pprint :as pp]
-    [cljs-reframe-template.views.compo :as compo]))
+    [cljs.pprint :as pp]))
 
 
 (defn main []
@@ -15,8 +13,8 @@
 
 (def toolbar-items
   [
-   ["#" :routes/frontpage]
-   ["component" :routes/component]])
+   ["#" :routes/#frontpage]
+   ["component" :routes/#component]])
 
 (defn route-info [route]
   [:div.m-4
@@ -33,7 +31,7 @@
        [route-info route]])))
 
 (defn main-panel []
-  (let [active-route (re-frame/subscribe [::ccases/active-panel])]
+  (let [active-route (re-frame/subscribe [:routes/current-route])]
     [:div
      [vt/navigation toolbar-items]
      [show-panel @active-route]]))
