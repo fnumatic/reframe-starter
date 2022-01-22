@@ -18,7 +18,7 @@
            re-pressed/re-pressed     {:mvn/version "0.3.1"
                                       :exclusions  [re-frame/re-frame 
                                                     reagent/reagent]},
-           garden/garden             {:mvn/version "1.3.10"},
+           ;;garden/garden             {:mvn/version "1.3.10"},
            metosin/reitit-schema     {:mvn/version "0.5.15"},
            metosin/reitit-frontend   {:mvn/version "0.5.15"},
            metosin/reitit            {:mvn/version "0.5.15"},
