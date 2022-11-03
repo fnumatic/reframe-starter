@@ -1,13 +1,12 @@
 {:aliases {:test     {:extra-paths ["test"],
                       :extra-deps  {org.clojure/test.check {:mvn/version "RELEASE"}}},
            :runner   {:extra-deps {com.cognitect/test-runner {:git/url "https://github.com/cognitect-labs/test-runner",
-                                                              :sha     "a85b3b02765fb68684ab9ee4a8598eacf7e471d2"}},
+                                                              :sha     "7284cda41fb9edc0f3bc6b6185cfb7138fc8a023"}},
                       :main-opts  ["-m" "cognitect.test-runner" "-d" "test"]},
            :dev      {:extra-deps  {
-                                    com.teknql/shadow-cljs-tailwind-jit {:git/url "https://github.com/fnumatic/shadow-cljs-tailwind-jit"
-                                                                         :sha "7a71bd1216fdac1e4aa63e92e5cede07153f66ae"}
+                                    com.teknql/shadow-cljs-tailwind-jit {:mvn/version "1.0.0"}
                                     binaryage/devtools         {:mvn/version "1.0.6"},
-                                    day8.re-frame/re-frame-10x {:mvn/version "1.2.7"}}
+                                    day8.re-frame/re-frame-10x {:mvn/version "1.5.0"}}
                       :extra-paths ["src" "env/dev" "target"]}
            :outdated {:extra-deps {com.github.liquidz/antq {:mvn/version "RELEASE"}}
                       :main-opts ["-m" "antq.core"]}},
@@ -21,6 +20,6 @@
            metosin/reitit-schema     {:mvn/version "0.5.18"},
            metosin/reitit-frontend   {:mvn/version "0.5.18"},
            metosin/reitit            {:mvn/version "0.5.18"},
-           re-frame/re-frame         {:mvn/version "1.2.0"},
-           thheller/shadow-cljs      {:mvn/version "2.19.0"}},
+           re-frame/re-frame         {:mvn/version "1.3.0"},
+           thheller/shadow-cljs      {:mvn/version "2.20.7"}},
  :paths   ["src" "resources"  "test/cljs"]}
