@@ -5,9 +5,9 @@
             [cljs-reframe-template.use-cases.core-cases :as ccases]
             [cljs-reframe-template.views.home :as views]
             [goog.dom :as gdom]
+            [react :as react]
             [re-frame.core :as re-frame]
-            [reagent.core :as r]
-            ["react-dom/client" :refer [createRoot]]))
+            [reagent.dom.client :as rdc]))
 
 
 
@@ -16,13 +16,13 @@
     (enable-console-print!)
     (println "dev mode")))
 
-(defonce root (createRoot (gdom/getElement "app")))
+(defonce root (rdc/create-root (gdom/getElement "app")))
 
 (defn mount-root []
   (println "mount")
   (re-frame/clear-subscription-cache!)
   (styl/inject-trace-styles js/document)
-  (.render root (r/as-element [views/main-panel])))
+  (rdc/render root [:> react/StrictMode {} [#'views/main-panel]]))
 
 (defn ^:after-load re-render []
   (mount-root))
