@@ -11,7 +11,7 @@
            :outdated {:extra-deps {com.github.liquidz/antq {:mvn/version "RELEASE"}}
                       :main-opts ["-m" "antq.core"]}},
  :deps    {org.clojure/clojure       {:mvn/version "RELEASE"},
-           reagent/reagent           {:mvn/version "1.1.1"},
+           reagent/reagent           {:mvn/version "1.2.0"},
            ns-tracker/ns-tracker     {:mvn/version "0.4.0"},
            re-pressed/re-pressed     {:mvn/version "0.3.2"
                                       :exclusions  [re-frame/re-frame 
