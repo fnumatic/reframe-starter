@@ -2,19 +2,26 @@
  :min-bb-version "0.3.6"
  :tasks
  {
-  watch {:task (shell "npx shadow-cljs watch app")}
-  compile {:task (shell "npx shadow-cljs compile app")}
-  release {:task (shell "npx shadow-cljs release app")}
+ :init (do 
+         ;;"npx shadow-cljs "
+         (defn run-shadow [args] (shell (str "pnpm exec shadow-cljs " args)))
+         ;;"npm run "
+         (defn run-srcpt [args] (shell (str "pnpm run " args)))
+         ;;"npx "
+         (defn run-dlx [args] (shell (str "pnpm dlx " args))))  
+  watch {:task (run-shadow "watch app")}
+  compile {:task (run-shadow "compile app")}
+  release {:task (run-shadow "release app")}
   ;;updates
-  update-npm {:task (shell "npx npm-check-updates -u")}
+  update-npm {:task (run-dlx "npm-check-updates -u")}
   update-deps {:task (shell "clojure -Moutdated --upgrade")}
  ;;tailwind 
-  purgecss {:task (shell "npm run-script tw")}
+  purgecss {:task (run-srcpt "tw")}
  ;;shadow report
   buildreport {:task (let [date (java.time.LocalDateTime/now)
                            formatter (java.time.format.DateTimeFormatter/ofPattern "yyyy-MM-dd")
                            file (str "buildreport_" (.format date formatter) ".html")]
-                       (shell (str "npx shadow-cljs run shadow.cljs.build-report app " file)))}
+                       (run-shadow (str "run shadow.cljs.build-report app " file)))}
 
   ,}}
  
